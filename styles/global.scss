@@ -1,0 +1,300 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "@styles/colors.module";
+
+$--root: 17px;
+$--text: 15px;
+$--MIN-WIDTH: 300px;
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: $--MIN-WIDTH;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+        Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.6rem;
+    font-size: $--root;
+}
+
+h1 {
+    font-size: 1.5em;
+    padding-top: 1em;
+}
+
+h2 {
+    font-size: 1.25em;
+    padding-top: 1em;
+}
+
+h3 {
+    font-size: 1.125em;
+    padding-top: 0.5em
+}
+
+h4 {
+    font-size: 1em;
+    padding-top: 0.5em
+}
+
+h5 {
+    font-size: 0.875em;
+    padding-top: 0.5em
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+main {
+    position: relative;
+}
+
+.home-header {
+    font-size: min(15vw, 3.75em);
+}
+
+a {
+    color: #289aff;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: from-font;
+    }
+}
+
+li {
+    list-style: none;
+    position: relative;
+
+    &.languageSelector {
+        &:hover {
+            a {
+                color: $--theme !important;
+            }
+        }
+
+        &.active {
+            background-color: #289aff;
+
+            a {
+                color: $--theme !important;
+            }
+        }
+
+        a {
+            color: $--primary;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.postTag {
+    top: 2em;
+
+    a {
+        margin: 1em 0.5em 0 0.5em;
+        padding: 0 0.7em;
+        font-weight: 400;
+        font-size: 15px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+
+        &:hover {
+            text-decoration: none;
+            border: 1px solid #6c8bff;
+            transition: all 0.3s ease-out;
+        }
+    }
+}
+
+section {
+    main {
+        font-size: $--text;
+
+        p {
+            padding: 0.25em 0;
+        }
+
+        img {
+            margin: 0.5em 0;
+        }
+
+        pre {
+            code {
+                background-color: transparent;
+            }
+        }
+
+        code {
+            font-size: 0.8em;
+            padding: 0.3em 0.4em;
+            margin: 0 0.2em;
+            border-radius: 5px;
+            background-color: $--code;
+            white-space: pre;
+            transition: background-color 0.3s ease;
+        }
+
+        li {
+            list-style: inside;
+            box-shadow: none;
+            overflow-wrap: break-word;
+
+            ol,
+            ul {
+                margin-left: 2.5em;
+
+                li {
+                    list-style: circle !important;
+                }
+            }
+        }
+
+        hr {
+            margin: 1em 0;
+            border-color: $--hr;
+        }
+    }
+
+    footer {
+        a {
+            color: $--primary;
+            font-weight: 500;
+        }
+
+        img {
+            margin: 0 0.35em;
+        }
+    }
+}
+
+.dark {
+    .postTag {
+        a {
+            color: #fff5fd;
+            border: 1px solid #646464;
+
+            &:hover {
+                border: 1px solid #ffccf2;
+            }
+        }
+    }
+
+    section {
+        pre {
+            div:first-child {
+                background-color: #1c1e22 !important;
+                border: 1px solid #3c3c3c !important;
+            }
+
+            code {
+                background-color: transparent;
+                border: none !important;
+            }
+        }
+
+        main {
+            hr {
+                border-color: #2a2a2a;
+            }
+
+            code {
+                background-color: $--theme-dark;
+                border: 1px solid #2f579f;
+                white-space: pre;
+                transition: background-color 0.3s ease;
+            }
+        }
+    }
+
+    li {
+        &.languageSelector {
+            &.active {
+                background-color: #289aff;
+
+                a {
+                    color: $--theme !important;
+                }
+            }
+
+            a {
+                color: $--primary-dark;
+            }
+        }
+    }
+
+
+    footer {
+        a {
+            color: $--primary-dark;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(540deg);
+    }
+}
+
+////////////////////////////////////////////////////////////////
+//        CP tab
+////////////////////////////////////////////////////////////////
+
+.easy,
+.easy2,
+.medium,
+.hard,
+.bronze {
+    color: $--primary-dark !important;
+
+    &:hover {
+        color: $--primary-dark !important;
+    }
+}
+
+.silver {
+    color: $--primary !important;
+
+    &:hover {
+        color: $--primary !important;
+    }
+}
+
+.fa-sun {
+    &:hover {
+        color: #ff8686;
+        transform: rotate(-270deg);
+    }
+}
+
+.fa-moon {
+    color: #e5e5e5;
+
+    &:hover {
+        color: #74c0f8 !important;
+        transform: rotate(270deg);
+    }
+}
