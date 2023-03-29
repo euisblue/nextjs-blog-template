@@ -1,11 +1,11 @@
-# [Blue blog](http://euisblue.me/) template
+# [Blue blog](https://bluelog-b6d3ilsz3-euisblue.vercel.app/) template
 Next.js + TailwindCSS + Vercel
 
 [Live Demo](https://nextjs-blog-template-one.vercel.app/)
 
 ![Demo GIF](/public/demo.gif)
 
-## ~~not really~~ Quick Start
+## Quick Start
 
 ### 1. Fork this reposity to your user repository.
 
